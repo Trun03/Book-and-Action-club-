@@ -1,0 +1,136 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Base.Theme.DemoApp"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/loadingPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/TopBarLight"
+                android:indeterminate="true" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_user"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedImageView"/>
+
+        </RelativeLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-76dp"
+            android:layout_marginTop="-10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4.5"
+            android:scaleX="0.3"
+            android:scaleY="0.3"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_below="@id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_marginTop="-20dp"/>
+
+        <LinearLayout
+            android:id="@+id/details_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/ratingBar"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_cook_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="@string/loading"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/baseline_access_time_24"
+                android:drawableTint="@color/mainColor"
+                android:drawablePadding="2dp"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_prepare_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:padding="6dp"
+                android:text="@string/loading"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/baseline_shopping_basket_24"
+                android:drawableTint="@color/mainColor"
+                android:drawablePadding="2dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:padding="6dp"
+                android:text="@string/loading"
+                android:textSize="10sp"
+                android:drawablePadding="2dp"
+                android:drawableLeft="@drawable/baseline_signal_cellular_alt_24"
+                android:drawableTint="@color/mainColor"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_bar"
+            android:layout_marginTop="-6dp"
+            android:padding="6dp"
+            android:text="@string/loading"
+            android:textSize="12sp" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

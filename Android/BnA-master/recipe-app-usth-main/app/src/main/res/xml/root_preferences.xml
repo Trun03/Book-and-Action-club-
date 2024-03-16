@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    Change sharedPreference of isLoggedIn-->
+    <PreferenceCategory app:title="@string/allow_ads">
+
+        <SwitchPreferenceCompat
+            android:id="@+id/allow_ads_switch"
+            app:key="allow_ads"
+            app:title="@string/allow_ads"
+            app:defaultValue="true"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
